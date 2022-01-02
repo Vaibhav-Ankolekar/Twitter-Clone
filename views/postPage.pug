@@ -1,0 +1,15 @@
+extends layouts/main-layout.pug
+
+block content
+	script.
+		let postId = '!{postId}'
+	
+	.postsContainer
+	.loadingSpinnerContainer
+		img(src="/images/loadingSpinner.gif", alt="Loading...")
+	
+	+createPostModals(userLoggedIn)
+	
+
+block scripts 
+	script(src="/js/postPage.js")
