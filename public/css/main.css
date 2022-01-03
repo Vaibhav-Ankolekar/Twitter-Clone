@@ -31,15 +31,20 @@ ul {
         Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    overflow: hidden;
 }
 
 .wrapper > .row {
     margin: 0;
-    height: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 a {
@@ -102,7 +107,9 @@ button span {
     border-left: 1px solid var(--light-grey);
     border-right: 1px solid var(--light-grey);
     display: flex;
+    height: 100%;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .titleContainer {
@@ -112,6 +119,10 @@ button span {
     align-items: center;
     border-bottom: 1px solid var(--light-grey);
     flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 2;
 }
 
 .titleContainer h1 {
@@ -275,8 +286,15 @@ button span {
     display: flex;
 }
 
-.postContentContainer .header .date {
+.postContentContainer .header .displayName {
     flex: 1;
+}
+
+.postContentContainer .userPostDetails {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px;
 }
 
 .errorMessage {
@@ -834,9 +852,45 @@ button span {
     right: 5px;
     width: 350px;
     background-color: #fff;
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3); */
 }
 
 #notificationList .active {
     background-color: #fff;
+}
+
+.bottom-nav {
+    z-index: 2;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 1px solid var(--light-grey);
+    padding: 0px var(--spacing);
+}
+
+.bottom-nav a.blue {
+    color: var(--blue);
+}
+
+.bottom-nav a {
+    padding: 10px;
+    font-size: 25px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #343434;
+    position: relative;
+}
+
+.bottom-nav a:hover {
+    background-color: var(--button-hover-bg);
+    color: var(--blue);
+    border-radius: 50%;
 }

@@ -464,10 +464,12 @@ const createPostHtml = (postData, largeFont = false) => {
                     <div class="postContentContainer">
                         <div class="pinnedPostText">${pinnedPostText}</div>
                         <div class="header">
-                            <a href="/profile/${postedBy.username}" class="displayName">${displayName}</a>
-                            <span class="username">${postedBy.username}</span>
+                        <a href="/profile/${postedBy.username}" class="displayName">${displayName}</a>
+                        ${buttons}
+                        </div>
+                        <div class="userPostDetails">
+                            <span class="username">@${postedBy.username}</span>
                             <span class="date">${timestamp}</span>
-                            ${buttons}
                         </div>
                         ${replyFlag}
                         <div class="postBody">

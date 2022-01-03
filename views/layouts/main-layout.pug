@@ -14,7 +14,7 @@ html(lang="en")
 			const userLoggedIn = !{userLoggedInJs};
 		.wrapper 
 			.row 
-				nav.col-2
+				nav.d-none.d-md-flex.col-2
 					a.blue(href="/")
 						i.fas.fa-dove 
 					a(href="/")
@@ -31,12 +31,27 @@ html(lang="en")
 						i.fas.fa-user
 					a(href="/logout")
 						i.fas.fa-sign-out-alt
-				.mainSectionContainer.col-10.col-md-8.col-lg-6
+				.mainSectionContainer.col-12.col-md-8.col-lg-6
 					.titleContainer 
 						h1 #{pageTitle}
 						block headerButton
 
 					block content
+
+					
+					.bottom-nav.d-md-none
+						a(href="/search")
+							i.fas.fa-search  
+						a(href="/notifications")
+							i.fas.fa-bell 
+						a(href="/")
+							i.fas.fa-home
+							span#notificationsBadge 8
+						a(href="/messages")
+							i.fas.fa-envelope
+								span#messagesBadge 8
+						a(href="/profile")
+							i.fas.fa-user
 				.d-none.d-md-block.col-md-2.col-lg-4
 
 		#notificationList

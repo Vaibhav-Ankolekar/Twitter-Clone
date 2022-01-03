@@ -7,8 +7,8 @@ block content
 		input#searchBox(type="text", name="searchBox", data-search=selectedTab, placeholder="Search for users or posts")
 
 	.tabsContainer
-		+createTab("Posts", `/search/posts`, selectedTab != "users")
-		+createTab("Users", `/search/users`,  selectedTab == "users")
+		+createTab("Users", `/search/users`,  selectedTab != "posts")
+		+createTab("Posts", `/search/posts`, selectedTab == "posts")
 
 	.resultsContainer
 

@@ -1,5 +1,9 @@
 extends layouts/main-layout.pug
 
+block headerButton
+	a.d-block.d-md-none(href="/logout")
+		i.fas.fa-sign-out-alt
+
 block content
 	if !profileUser
 		span.errorMessage Check the url you are trying to access

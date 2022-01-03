@@ -17,14 +17,14 @@ $("#searchBox").keydown((event) => {
 });
 
 const search = (searchTerm, searchType) => {
-	let url = (searchType == "users") ? "/api/users" : "api/posts";
+	let url = (searchType == "posts") ? "/api/posts" : "/api/users";
 
 	$.get(url, { search: searchTerm }, (results) => {
-		if (searchType == "users") {
-			outputUsers(results, $(".resultsContainer"))
+		if (searchType == "posts") {
+			outputPost(results, $(".resultsContainer"));
 		}
 		else {
-			outputPost(results, $(".resultsContainer"));
+			outputUsers(results, $(".resultsContainer"))
 		}
 	})
 };
