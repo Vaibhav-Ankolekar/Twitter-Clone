@@ -677,9 +677,9 @@ const refreshMessagesBadge = () => {
         let numResults = data.length;
 
         if (numResults > 0) {
-            $("#messagesBadge").text(numResults).addClass("active");
+            $(".messagesBadge").text(numResults).addClass("active");
         } else {
-            $("#messagesBadge").text("").removeClass("active");
+            $(".messagesBadge").text("").removeClass("active");
         }
     })
 }
@@ -690,9 +690,9 @@ const refreshNotificationBadge = () => {
         let numResults = data.length;
 
         if (numResults > 0) {
-            $("#notificationsBadge").text(numResults).addClass("active");
+            $(".notificationsBadge").text(numResults).addClass("active");
         } else {
-            $("#notificationsBadge").text("").removeClass("active");
+            $(".notificationsBadge").text("").removeClass("active");
         }
     })
 }

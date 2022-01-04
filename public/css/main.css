@@ -821,8 +821,8 @@ button span {
     pointer-events: none;
 }
 
-#notificationsBadge,
-#messagesBadge {
+.notificationsBadge,
+.messagesBadge {
     background-color: var(--red);
     height: 25px;
     width: 25px;
@@ -841,8 +841,8 @@ button span {
     visibility: hidden;
 }
 
-#notificationsBadge.active,
-#messagesBadge.active {
+.notificationsBadge.active,
+.messagesBadge.active {
     visibility: visible;
 }
 
