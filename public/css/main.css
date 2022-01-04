@@ -847,6 +847,7 @@ button span {
 }
 
 #notificationList {
+    z-index: 3;
     position: fixed;
     top: 5px;
     right: 5px;
@@ -857,6 +858,10 @@ button span {
 
 #notificationList .active {
     background-color: #fff;
+}
+
+#notificationList .notification {
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
 }
 
 .bottom-nav {
