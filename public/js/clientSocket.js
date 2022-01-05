@@ -1,10 +1,7 @@
 let connected = false;
 
-console.log("protocol : " + window.location.protocol);
-console.log("host : " + window.location.host);
-console.log("hostname : " + window.location.hostname);
-
-let socket = io("http://localhost:5000");
+server_url = window.location.protocol + "//" + window.location.host;
+let socket = io(server_url);
 
 socket.emit("setup", userLoggedIn);
 
