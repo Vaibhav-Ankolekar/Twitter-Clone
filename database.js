@@ -9,8 +9,7 @@ class Database {
     }
 
     connect() {
-        // mongoose.connect("mongodb+srv://admin:${process.env.MONGODB_API_PASSWORD}@twitterclonecluster.zqzaz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
-        mongoose.connect(`mongodb+srv://admin:${process.env.MONGODB_API_PASSWORD}@twitterclonecluster.zqzaz.mongodb.net/TwitterCloneDB?retryWrites=true&w=majority`)
+        mongoose.connect(process.env.MONGO_URI)
             .then(() => {
                 console.log("Connection to DB successful");
             })
