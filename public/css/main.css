@@ -860,7 +860,7 @@ button span {
     background-color: #fff;
 }
 
-#notificationList .notification {
+#notificationList .resultListItem {
     box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
 }
 

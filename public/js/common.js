@@ -814,7 +814,7 @@ const getUserChatImageElement = (user) => {
 
 const showMessagePopup = (data) => {
 
-    if (!data.chat.latestMessage) {
+    if (!Array.isArray(data.chat.latestMessage)) {
         data.chat.latestMessage = data;
     }
 
